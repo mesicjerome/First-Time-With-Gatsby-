@@ -6,12 +6,12 @@ const Header = () => (
     <div className="container">
       <div className="inner-header">
         <div className="logo">
-          <Link to="/">GATSBY</Link>
+          <Link to="/">JAPAN</Link>
         </div>
         <div className="navigation">
           <nav>
             <Link to="/about">About</Link>
-            <Link to="/work">Work</Link>
+            <Link to="/cities">Cities</Link>
             <Link to="/contact">Contact</Link>
           </nav>
         </div>

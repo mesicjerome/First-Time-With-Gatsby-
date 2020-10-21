@@ -9,6 +9,8 @@ $off-white: #f2f4f5;
 html, body {
     font-family: $font;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -59,10 +61,225 @@ header {
                     font-size: 0.75rem;
                     color: $black;
                     &:last-child { 
-
+                        margin-right: 0px;
                     }
                 }
             }
         }
     }
+}
+
+//Banner
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    height: 100vh;
+    .row {
+        position: relative;
+        .main-text {
+            font-size: 5.8rem;
+            text-transform: uppercase;
+            letter-spacing: 42px;
+            font-weight: 700;
+            color: $white;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            mix-blend-mode: difference;
+            z-index: 9;
+            @media (max-width: 1440px) {
+                font-size: 4.4rem;
+                letter-spacing: 36px;
+            }
+        }
+        .main-image {
+            width:320px;
+            margin: 0 auto;
+            @media (max-width: 1440px) {
+                width: 300;
+            }
+        }
+        .side-image {
+            width: 300px;
+            position: absolute;
+            @media (max-width: 1440px) {
+                width: 300px;
+            }
+            &.left {
+                left: 148px;
+                top: -28px;
+                @media (max-width: 1440px) {
+                    left: 108px;
+                }
+            }
+            &.right {
+                right: 148px;
+                bottom: -28px;
+                @media (max-width: 1440px) {
+                    right: 108px;
+                }
+            }
+        }
+    }
+    .scroll {
+        font-weight: 700;
+        font-size: .875rem;
+        letter-spacing: 1.5px;
+        color: $black;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 48px;
+    }
+    .fixed-misc {
+        position: fixed;
+        top: 50%;
+        right: -48px;
+        transform: rotate(-90deg);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: 1.5px;
+        color: $white;
+        mix-blend-mode: difference;
+        z-index: 8;
+        @media (max-width: 1440px) {
+            right: -40px;
+        }
+    }
+}
+
+//AboutBlurb
+
+.about-blurb {
+    padding: 48px 0;
+    background: $white;
+    position: relative;
+    .inner-blurb {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content {
+            width: 33%;
+            @media (max-width: 1440px) {
+                width: 40%;
+            }
+             h3 {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.8;
+                letter-spacing: 1.5px;
+                margin: 0;
+             }
+             p {
+                font-size: 1rem;
+                line-height: 2rem;
+                font-weight: 300;
+                margin: 40px 0 72px;
+             }
+             .btn-row {
+                a {
+                    font-weight: 700;
+                    font-size: .875rem;
+                    letter-spacing: 1.5px;
+                    color: $black;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+             }
+        }
+        .images {
+            width: 50%;
+            height: 1000px;
+            position: relative;
+            z-index: 7;
+            @media (max-width: 1440px) {
+                height: 800px;
+            }
+            .top-right {
+                position: absolute;
+                width: 320px;
+                top: 0;
+                right: 0;
+                z-index: 4;
+                @media (max-width: 1440px) {
+                    width: 260px;
+                }
+            }
+            .bottom-left {
+                position: absolute;
+                width: 720px;
+                bottom: 0;
+                left: 0;
+                @media (max-width: 1440px) {
+                    width: 520px;
+                }
+            }
+        }
+    }
+    .black-box {
+        background: $black;
+        height: 418px;
+        width: 700px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: 1440px) {
+            width: 500px; 
+        }
+        &.overlay {
+            z-index: 7;
+            background: $maroon;
+            mix-blend-mode: overlay;
+        }
+    }
+}
+
+//CityPage
+.cityPage {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    height: 100vh;
+    .content {
+        width: 33%;
+        @media (max-width: 1440px) {
+            width: 40%;
+        }
+        h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.8;
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: 300;
+            margin: 40px 0 72px;
+        }
+    }
+    .fixed-misc {
+        position: fixed;
+        top: 50%;
+        right: -48px;
+        transform: rotate(-90deg);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: 1.5px;
+        color: $black;
+        mix-blend-mode: difference;
+        z-index: 8;
+        @media (max-width: 1440px) {
+            right: -40px;
+        }
+    } 
 }
